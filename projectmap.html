@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+<style type="text/css">
+body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+</style>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=psFpfQDl3QlzNN6rF41Goywq"></script>
+<title>地图官网展示效果</title>
+</head>
+<body>
+<div id="allmap"></div>
+</body>
+</html>
+<script type="text/javascript">
+
+// 百度地图API功能
+var map = new BMap.Map("allmap");                        // 创建Map实例
+// map.centerAndZoom(new BMap.Point(114.30254, 30.5991), 11);     // 初始化地图,设置中心点坐标和地图级别
+map.centerAndZoom(new BMap.Point(114.317057,30.611844), 13);     // 初始化地图,设置中心点坐标和地图级别
+map.addControl(new BMap.NavigationControl());               // 添加平移缩放控件
+map.addControl(new BMap.ScaleControl());                    // 添加比例尺控件
+map.addControl(new BMap.OverviewMapControl());              //添加缩略地图控件
+map.enableScrollWheelZoom();                            //启用滚轮放大缩小
+map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
+map.setCurrentCity("武汉");          // 设置地图显示的城市 此项是必须设置的
+
+var projectPoints = new Array();
+var projectMarkers = new Array();
+
+var point1 = new BMap.Point(114.317057,30.611844);
+var point2 = new BMap.Point(114.26977,30.594997);
+var point3 = new BMap.Point(114.29945,30.585111);
+
+projectPoints.push(point1);
+projectPoints.push(point2);
+projectPoints.push(point3);
+
+var marker1 = new BMap.Marker(point1);  // 创建标注，为要查询的地方对应的经纬度
+map.addOverlay(marker1);
+  
+var marker2 = new BMap.Marker(point2);  // 创建标注，为要查询的地方对应的经纬度
+map.addOverlay(marker2);
+
+var marker3 = new BMap.Marker(point3);  // 创建标注，为要查询的地方对应的经纬度
+map.addOverlay(marker3);
+
+projectMarkers.push(marker1);
+projectMarkers.push(marker2);
+projectMarkers.push(marker3);
+
+
+function showProjectPoint(point, marker, time) {
+	window.setTimeout(function(){    
+	
+  map.panTo(point);  
+  
+	// map.clearOverlays();//清空原来的标注
+      
+  var content = "<br/><br/>经度：" + point.lng + "<br/>纬度：" + point.lat;
+  var infoWindow = new BMap.InfoWindow("<p style='font-size:14px;'>" + content + "</p>");
+  marker.openInfoWindow(infoWindow);
+  //marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
+
+ }, time);
+}
+
+var i = 0
+
+// while (i < projectPoints.length) {
+//   showProjectPoint(projectPoints[i], projectMarkers[i], 5000*(i+1));
+//   i++;
+//   if (i == projectPoints.length) {
+//     i = 0;
+//   }
+// }
+// showProjectPoint(point1, marker1, 5000);
+// showProjectPoint(point2, marker2, 10000);
+// showProjectPoint(point3, marker3, 15000);
+
+
+map.addEventListener("click",function(e){  
+  alert(e.point.lng + "," + e.point.lat);  
+});
+</script>
