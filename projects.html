@@ -9,8 +9,9 @@
 <!-- map related: start -->
 <style type="text/css">
 #allmap {width: 100%;height: 360px;overflow: hidden;margin:0;}
+img { max-width: none; }
 </style>
-<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=XXX"></script>
+<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=psFpfQDl3QlzNN6rF41Goywq"></script>
 <!-- map related: end -->
 </head>
 <!--[if lt IE 9]>
@@ -42,7 +43,7 @@
  <a name="pagetop" id="pagetop"></a>
  <div id="banner">  
     <div id="nyshow">
-      <div class="jdtu"><img src="./projects_files/consult_show.jpg" alt="示范项目"></div>
+      <div class="jdtu"><img src="./projects_files/projects_show.jpg" alt="示范项目"></div>
     </div>
     <div class="min_show">武汉智慧城市</div>
  </div>
@@ -112,6 +113,11 @@
      </div>
      <div id="allmap"></div>
      <div id="projectlist">
+     
+     		<div style="margin-top:20px;"><img src="./projects_files/project_list.jpg" height="40px"></div>
+<!--      		<div style="margin-top:20px;"><img src="/wrisc/static/v2/images/project_list.jpg" height="40px"></div> -->
+
+     
 	     	<div id="projectrow">
 		     <div class="zxfw">
 		        <div class="left_tu"><img src="./projects_files/consult.jpg" width="266px" height="180px"></div><!--图片宽度不要超过257像素-->
@@ -270,66 +276,179 @@ map.addControl(new BMap.MapTypeControl());          //添加地图类型控件
 map.setCurrentCity("武汉");          // 设置地图显示的城市 此项是必须设置的
 
 var demoProjects = [
-	
-	{"point": {"lng":114.311883, "lat":30.603141 }, "domain": "智慧空间","name": "<li>--武汉地理空间云信息平台</li>"},
-	{"point": {"lng":114.313608, "lat":30.604882}, "domain": "智慧城管","name": "<li>--武汉数字化城管公共服务平台</li>"},
-	{"point": {"lng":114.317057, "lat":30.611844 }, "domain": "智慧校园","name": "<li>--市第二中学“智慧校园”示范项目</li>"},
-	{"point": {"lng":114.31677, "lat":30.616817 }, "domain": "智慧社区","name": "<li>--武汉永清商务区弱电智能化项目</li>"},
-	{"point": {"lng":114.302109, "lat":30.667276 }, "domain": "智慧政务","name": "<li>--市行政服务中心信息系统</li>"},
-	{"point": {"lng":114.265602, "lat":30.620795 }, "domain": "智慧公共安全","name": "<li>--武汉市城市视频监控系统</li>"},
-	{"point": {"lng":114.154931, "lat":30.660317 }, "domain": "智慧食品安全/智慧旅游","name": "<li>--二维条码食品质量安全追溯解决方案</li><li>--武汉市优秀历史建筑二维码应用项目</li>"},
-	{"point": {"lng":114.203224, "lat":30.611098 }, "domain": "智慧生活","name": "<li>--武汉市肉品质量安全可追溯信息系统</li>"},
-	{"point": {"lng":114.276238, "lat":30.60886 }, "domain": "智慧政务","name": "<li>--江汉区社会管理与服务信息系统项目</li>"},
-	{"point": {"lng":114.281412, "lat":30.603141 }, "domain": "智慧文化","name": "<li>--武汉市智慧电视书城项目</li>"},
-	{"point": {"lng":114.26977, "lat":30.594997 }, "domain": "智能公交","name": "<li>--武汉市“智能公交”系统</li>"},
-	{"point": {"lng":114.29945, "lat":30.585111 }, "domain": "智慧医疗","name": "<li>--市中心医院智慧医疗试点项目</li>"},
-	{"point": {"lng":114.254679, "lat":30.56857 }, "domain": "智慧交通","name": "<li>--武汉市城市路桥隧不停车收费系统</li><li>--基于ETC技术的智能停车管理系统项目</li>"},
-	{"point": {"lng":114.226795, "lat":30.56658 }, "domain": "智能养老","name": "<li>--侨E脉智能终端研发与智能居家养老云服务平台</li>"},
-	{"point": {"lng":114.210985, "lat":30.557624 }, "domain": "智慧商贸","name": "<li>--九州通医药电子商务项目</li>"},
-	{"point": {"lng":114.324818, "lat":30.559863}, "domain": "智能养老","name": "<li>--武昌区智能养老平台</li>"},
-	{"point": {"lng":114.345228, "lat":30.552648 }, "domain": "智慧交通","name": "<li>--中国电信武汉分公司“翼出行”项目</li>"},
-	{"point": {"lng":114.399845, "lat":30.516068 }, "domain": "智慧交通","name": "<li>--车联网公共服务平台试点项目</li>"},
-	{"point": {"lng":114.403007, "lat":30.513081 }, "domain": "智慧通讯","name": "<li>--“无线光谷”项目</li>"},
-	{"point": {"lng":114.436065, "lat":30.510841 }, "domain": "智慧水务","name": "<li>--基于物联网的污水处理综合运营管理系统</li>"},
-	{"point": {"lng":114.429166, "lat":30.481714 }, "domain": "智慧交通","name": "<li>--基于ETC技术后台支付的智慧停车场项目</li>"},
-	{"point": {"lng":114.400995, "lat":30.464035 }, "domain": "地理信息服务","name": "<li>--“我秀中国”公众位置服务平台项目</li>"},
-	{"point": {"lng":114.42974, "lat":30.441246 }, "domain": "智慧政务","name": "<li>--江夏区基于GIS平台的数字行政决策辅助系统</li>"},
-	{"point": {"lng":114.274801, "lat":30.458805 }, "domain": "现代农业电子商务","name": "<li>--家事易生鲜速递服务平台</li>"},
-	{"point": {"lng":114.092552, "lat":30.321112 }, "domain": "智慧农业","name": "<li>--汉南区畜牧兽医水产局智慧渔业试点项目</li>"}
-	
+	{
+		"point": {"lng":114.311883, "lat":30.603141 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/17' target='_blank'>智慧空间</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/17' target='_blank'>武汉地理空间云信息平台</a>"
+	},
+	{
+		"point": {"lng":114.313608, "lat":30.604882}, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/33' target='_blank'>智慧城管</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/33' target='_blank'>武汉数字化城管公共服务平台</a>"
+	},
+	{
+		"point": {"lng":114.317057, "lat":30.611844 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/31' target='_blank'>智慧校园</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/31' target='_blank'>市第二中学“智慧校园”示范项目</a>"
+	},
+	{
+		"point": {"lng":114.31677, "lat":30.616817 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/21' target='_blank'>智慧社区</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/21' target='_blank'>武汉永清商务区弱电智能化项目</a>"
+	},
+	{
+		"point": {"lng":114.302109, "lat":30.667276 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/19' target='_blank'>智慧政务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/19' target='_blank'>市行政服务中心信息系统</a>"
+	},
+	{
+		"point": {"lng":114.265602, "lat":30.620795 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/12' target='_blank'>智慧公共安全</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/12' target='_blank'>武汉市城市视频监控系统</a>"
+	},
+	{
+		"point": {"lng":114.154931, "lat":30.660317 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/26' target='_blank'>智慧食品安全/智慧旅游</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/26' target='_blank'>二维条码食品质量安全追溯解决方案</a><br /><a href='http://www.wrisc.cn/wrisc2/demoproject/32' target='_blank'>武汉市优秀历史建筑二维码应用项目</a>"
+	},
+	{
+		"point": {"lng":114.203224, "lat":30.611098 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/15' target='_blank'>智慧生活</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/15' target='_blank'>武汉市肉品质量安全可追溯信息系统</a>"
+	},
+	{
+		"point": {"lng":114.276238, "lat":30.60886 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/29' target='_blank'>智慧政务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/29' target='_blank'>江汉区社会管理与服务信息系统项目</a>"
+	},
+	{
+		"point": {"lng":114.281412, "lat":30.603141 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/34' target='_blank'>智慧文化</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/34' target='_blank'>武汉市智慧电视书城项目</a>"
+	},
+	{
+		"point": {"lng":114.26977, "lat":30.594997 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/27' target='_blank'>智能公交</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/27' target='_blank'>武汉市“智能公交”系统</a>"
+	},
+	{
+		"point": {"lng":114.29945, "lat":30.585111 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/9' target='_blank'>智慧医疗</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/9' target='_blank'>市中心医院智慧医疗试点项目</a>"
+	},
+	{
+		"point": {"lng":114.254679, "lat":30.56857 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/13' target='_blank'>智慧交通</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/13' target='_blank'>武汉市城市路桥隧不停车收费系统</a><br /><a href='http://www.wrisc.cn/wrisc2/demoproject/38' target='_blank'>基于ETC技术的智能停车管理系统项目</a>"
+	},
+	{
+		"point": {"lng":114.226795, "lat":30.56658 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/30' target='_blank'>智能养老</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/30' target='_blank'>侨E脉智能终端研发与智能居家养老云服务平台</a>"
+	},
+	{
+		"point": {"lng":114.210985, "lat":30.557624 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/14' target='_blank'>智慧商贸</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/14' target='_blank'>九州通医药电子商务项目</a>"
+	},
+	{
+		"point": {"lng":114.324818, "lat":30.559863}, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/28' target='_blank'>智能养老</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/28' target='_blank'>武昌区智能养老平台</a>"
+	},
+	{
+		"point": {"lng":114.345228, "lat":30.552648 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/23' target='_blank'>智慧交通</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/23' target='_blank'>中国电信武汉分公司“翼出行”项目</a>"
+	},
+	{
+		"point": {"lng":114.399845, "lat":30.516068 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/16' target='_blank'>智慧交通</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/16' target='_blank'>车联网公共服务平台试点项目</a>"
+	},
+	{
+		"point": {"lng":114.403007, "lat":30.513081 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/20' target='_blank'>智慧通讯</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/20' target='_blank'>“无线光谷”项目</a>"
+	},
+	{
+		"point": {"lng":114.436065, "lat":30.510841 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/24' target='_blank'>智慧水务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/24' target='_blank'>基于物联网的污水处理综合运营管理系统</a>"
+	},
+	{
+		"point": {"lng":114.429166, "lat":30.481714 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/39' target='_blank'>智慧交通</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/39' target='_blank'>基于ETC技术后台支付的智慧停车场项目</a>"
+	},
+	{
+		"point": {"lng":114.400995, "lat":30.464035 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/35' target='_blank'>地理信息服务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/35' target='_blank'>“我秀中国”公众位置服务平台项目</a>"
+	},
+	{
+		"point": {"lng":114.42974, "lat":30.441246 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/11' target='_blank'>智慧政务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/11' target='_blank'>江夏区基于GIS平台的数字行政决策辅助系统</a>"
+	},
+	{
+		"point": {"lng":114.274801, "lat":30.458805 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/22' target='_blank'>现代农业电子商务</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/22' target='_blank'>家事易生鲜速递服务平台</a>"
+	},
+	{
+		"point": {"lng":114.092552, "lat":30.321112 }, 
+		"domain": "<a href='http://www.wrisc.cn/wrisc2/demoproject/10' target='_blank'>智慧农业</a>",
+		"name": "<a href='http://www.wrisc.cn/wrisc2/demoproject/10' target='_blank'>汉南区畜牧兽医水产局智慧渔业试点项目</a>"
+	}
 ]
 
 for (i = 0; i < demoProjects.length; i++) {
 	var point = new BMap.Point(demoProjects[i].point.lng, demoProjects[i].point.lat);
 	var marker = new BMap.Marker(point);
 	map.addOverlay(marker);
+	
+	var label = new BMap.Label(demoProjects[i].domain,{offset:new BMap.Size(20,-10)});
+	marker.setLabel(label);
+	
+	marker.addEventListener("click",showInfo.bind(null, demoProjects[i]));
 }
 
 
-function showInfo(demoproject) {
 
+
+function showInfo(demoproject, e) {
+
+/*
 	var point = new BMap.Point(demoproject.point.lng, demoproject.point.lat);
   var marker = new BMap.Marker(point);
 	map.addOverlay(marker);	
-  map.panTo(point);  
+  map.panTo(point); 
+*/ 
   
 	// map.clearOverlays();//清空原来的标注
+	
+	var p = e.target;
+	var point = new BMap.Point(p.getPosition().lng, p.getPosition().lat);
       
   var content = demoproject.name;
   
   var opts = {
 	  width : 240,     // 信息窗口宽度
-	  height: 80,     // 信息窗口高度
-	  title : demoproject.domain , // 信息窗口标题
+	  height: 20,     // 信息窗口高度
+	  
 	  enableMessage:false //设置允许信息窗发送短息
 	}
   
-  var infoWindow = new BMap.InfoWindow("<p style='font-size:12px;text-indent:2em;margin:0;line-height:1.2;'>" + content + "</p>", opts);
+  var infoWindow = new BMap.InfoWindow("<p style='font-size:12px;margin:0;padding:0;'>" + content + "</p>", opts);
 
-  marker.openInfoWindow(infoWindow);
+  map.openInfoWindow(infoWindow, point);
   //marker.setAnimation(BMAP_ANIMATION_BOUNCE); //跳动的动画
 }
 
+
+
+/*
 var i = 0;
 
 time = setInterval("change()", 5000);
@@ -344,6 +463,7 @@ function change() {
 		i++;
 	}
 }
+*/
 
 
 

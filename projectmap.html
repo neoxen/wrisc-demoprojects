@@ -5,6 +5,7 @@
 <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
 <style type="text/css">
 body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;}
+img { max-width: auto;}
 </style>
 <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=psFpfQDl3QlzNN6rF41Goywq"></script>
 <title>地图官网展示效果</title>
@@ -75,12 +76,14 @@ var i = 0
 //     i = 0;
 //   }
 // }
-// showProjectPoint(point1, marker1, 5000);
-// showProjectPoint(point2, marker2, 10000);
-// showProjectPoint(point3, marker3, 15000);
+showProjectPoint(point1, marker1, 5000);
+showProjectPoint(point2, marker2, 10000);
+showProjectPoint(point3, marker3, 15000);
 
 
+/*
 map.addEventListener("click",function(e){  
   alert(e.point.lng + "," + e.point.lat);  
 });
+*/
 </script>
